@@ -1,7 +1,13 @@
 # euler
-These are my solutions to the project euler problems.
-I work in the root directory and move files to solvedProblems when complete.
-
-Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve. Although mathematics will help you arrive at elegant and efficient methods, the use of a computer and programming skills will be required to solve most problems.
+These are my solutions to the project euler problems and the stories of adventure along the way.
 
 ## Notes to Self
+I did the first 56 problems in 2012-2015, before I started keeping code in Github.
+
+## Todo
+* Reorganize files for easy readability
+
+## Process
+1. Start with a text file named after the problem number. euler31.md for example.
+2. Get the text of the problem from https://projecteuler.net/problem=31
+3. Start solving in the text file and make code files or other files as needed.
