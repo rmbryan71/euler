@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="537e33c3-0941-456e-b97e-e8f1196a51a0" name="Default" comment="solves euler 70.">
-      <change afterPath="$PROJECT_DIR$/euler71.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python71.md" afterDir="false" />
+    <list default="true" id="537e33c3-0941-456e-b97e-e8f1196a51a0" name="Default" comment="solves euler 71.">
+      <change afterPath="$PROJECT_DIR$/euler72.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/euler72.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -15,7 +15,8 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/projectEuler$euler70.coverage" NAME="euler70 Coverage Results" MODIFIED="1538320422292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/projectEuler$euler71.coverage" NAME="euler71 Coverage Results" MODIFIED="1538320859616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/projectEuler$euler72.coverage" NAME="euler72 Coverage Results" MODIFIED="1538333652159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/projectEuler$euler71.coverage" NAME="euler71 Coverage Results" MODIFIED="1538330751061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-194697337">
@@ -33,33 +34,33 @@
         <counts>
           <entry key="LICENSE" value="1" />
           <entry key="iml" value="1" />
-          <entry key="md" value="4" />
-          <entry key="pstat" value="10" />
-          <entry key="py" value="5" />
+          <entry key="md" value="5" />
+          <entry key="pstat" value="17" />
+          <entry key="py" value="9" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="Markdown" value="4" />
+          <entry key="Markdown" value="5" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Profiler Session" value="10" />
-          <entry key="Python" value="5" />
+          <entry key="Profiler Session" value="17" />
+          <entry key="Python" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="3519" />
-          <entry key="PLAIN_TEXT" value="58" />
-          <entry key="Python" value="2045" />
+          <entry key="Markdown" value="4436" />
+          <entry key="PLAIN_TEXT" value="59" />
+          <entry key="Python" value="2797" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="3519" />
-          <entry key="py" value="2045" />
-          <entry key="txt" value="58" />
+          <entry key="md" value="4436" />
+          <entry key="py" value="2797" />
+          <entry key="txt" value="59" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -68,11 +69,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python71.md">
+        <entry file="file://$PROJECT_DIR$/euler72.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="315">
-                <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+              <first_editor relative-caret-position="330">
+                <caret line="20" selection-start-line="20" selection-end-line="20" />
               </first_editor>
               <second_editor />
             </state>
@@ -80,10 +81,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/euler71.py">
+        <entry file="file://$PROJECT_DIR$/euler72.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            <state relative-caret-position="577">
+              <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+              <folding>
+                <marker date="1538333652144" expanded="true" signature="719:818" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,8 +123,10 @@
         <option value="$PROJECT_DIR$/euler69.md" />
         <option value="$PROJECT_DIR$/euler70.md" />
         <option value="$PROJECT_DIR$/euler70.py" />
-        <option value="$PROJECT_DIR$/python71.md" />
         <option value="$PROJECT_DIR$/euler71.py" />
+        <option value="$PROJECT_DIR$/python71.md" />
+        <option value="$PROJECT_DIR$/euler72.md" />
+        <option value="$PROJECT_DIR$/euler72.py" />
       </list>
     </option>
   </component>
@@ -186,7 +192,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.euler71">
+  <component name="RunManager" selected="Python.euler72">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -268,28 +274,6 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <configuration name="euler66" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="euler59" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solvedProblems/euler66.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="euler67" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="projectEuler" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -370,6 +354,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solvedProblems/euler71.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="euler72" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="projectEuler" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solvedProblems/euler72.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -472,19 +478,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.euler66" />
       <item itemvalue="Python.euler67" />
       <item itemvalue="Python.euler69" />
       <item itemvalue="Python.euler70" />
       <item itemvalue="Python.euler71" />
+      <item itemvalue="Python.euler72" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.euler72" />
         <item itemvalue="Python.euler71" />
         <item itemvalue="Python.euler70" />
         <item itemvalue="Python.euler69" />
         <item itemvalue="Python.euler67" />
-        <item itemvalue="Python.euler66" />
       </list>
     </recent_temporary>
   </component>
@@ -560,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538319817353</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="solves euler 71.">
+      <created>1538320996967</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1538320996967</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -653,7 +666,8 @@
     <MESSAGE value="completed euler 68" />
     <MESSAGE value="solves euler 69 and makes some updates to the readme." />
     <MESSAGE value="solves euler 70." />
-    <option name="LAST_COMMIT_MESSAGE" value="solves euler 70." />
+    <MESSAGE value="solves euler 71." />
+    <option name="LAST_COMMIT_MESSAGE" value="solves euler 71." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -737,19 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solvedProblems/euler69.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="42" selection-start-line="42" selection-end-line="54" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1538308844549" expanded="true" signature="450:481" ph="..." />
-            <marker date="1538308844549" expanded="true" signature="817:822" ph="..." />
-            <marker date="1538308844549" expanded="true" signature="1091:1092" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/solvedProblems/euler70.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -760,30 +761,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/solvedProblems/python71.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="375">
+            <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solvedProblems/euler69.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1538308844549" expanded="true" signature="450:481" ph="..." />
+            <marker date="1538308844549" expanded="true" signature="817:822" ph="..." />
+            <marker date="1538308844549" expanded="true" signature="1091:1092" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/euler72.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="330">
+            <caret line="20" selection-start-line="20" selection-end-line="20" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/solvedProblems/euler70.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="52" column="2" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="14" selection-end-column="17" />
           <folding>
             <marker date="1538319744352" expanded="true" signature="308:433" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python71.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="315">
-            <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/solvedProblems/euler71.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="12" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/euler71.py">
+    <entry file="file://$PROJECT_DIR$/euler72.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state relative-caret-position="577">
+          <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+          <folding>
+            <marker date="1538333652144" expanded="true" signature="719:818" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
