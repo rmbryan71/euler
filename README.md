@@ -1,5 +1,6 @@
 # euler
 These are my solutions to the project euler problems and the stories of adventure along the way.
+My projecteuler.net friend key is : 1183867_IMS0sWktfxXi9wYmDmPGoLWGtiz71nXV
 
 ## Notes to Self
 I did the first 56 problems in 2012-2015, before I started keeping code in Github.
