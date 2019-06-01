@@ -45,7 +45,11 @@ def rs_range_counter(a, b):
             counter += 1
     return counter
 
+def rs_range_counter_beta(a, b):
+    return sum(is_root_smooth(i) for i in range(a, b + 1))
+
+
 start = time.time()
-print(rs_range_counter(1, 1000000))
+print(rs_range_counter_beta(1, 1000000))
 end = time.time()
 print(end - start, " seconds.")
