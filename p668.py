@@ -51,7 +51,17 @@ def rs_range_counter_beta(a, b):
         return sum(p.map(is_root_smooth, range(a, b + 1)))
 
 
-start = time.time()
-print(rs_range_counter_beta(1, 40000))
-end = time.time()
-print(end - start, " seconds.")
+counter = 0
+max = 10000000000
+globalstart = time.time()
+for a in range(1, max, 100000):
+    start = time.time()
+    x = rs_range_counter_beta(a, a + 99999)
+    end = time.time()
+    counter += x
+    payload = str(x) + ", " + str(int(100*a/max)) + ", " + str(int(end - start))
+    print(payload)
+globalend = time.time()
+print("Done.")
+print(counter, globalend - globalstart, "seconds")
+
