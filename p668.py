@@ -1,30 +1,51 @@
 import math
 import time
+primeset = []
 
-def maxPFactor(n):
-    maxPrime = -1
+def primes(n):
+    """ Returns  a list of primes < n """
+    sieve = [True] * n
+    for i in range(3,int(n**0.5)+1,2):
+        if sieve[i]:
+            sieve[i*i::2*i]=[False]*((n-i*i-1)//(2*i)+1)
+    return [2] + [i for i in range(3,n,2) if sieve[i]]
 
-    # Print the number of 2s that divide n
+
+def maxpfactor(n):
+    maxprime = -1
+    if n == 0:
+        return 0
+
     while n % 2 == 0:
-        maxPrime = 2
+        maxprime = 2
         n >>= 1  # equivalent to n /= 2
 
     for i in range(3, int(math.sqrt(n)) + 1, 2):
         while n % i == 0:
-            maxPrime = i
+            maxprime = i
             n = n / i
 
     if n > 2:
-        maxPrime = n
+        maxprime = n
 
-    return int(maxPrime)
+    return int(maxprime)
 
 
 def is_root_smooth(i):
-    if (maxPFactor(i) < math.sqrt(i)):
+    if maxpfactor(i) < math.sqrt(i):
         return True
     else:
         return False
+
+
+# def fast_is_root_smooth(i):
+#     #is there a single prime factor of i greater than sqrt i?
+#     r = math.ceil(math.sqrt(i))
+#     for j in primes_range(r, i+1):
+#         if i % j == 0:
+#             # print("Not rs because ", j, " is a prime factor of ", i, " greater than ", r)
+#             return False
+#     return True
 
 
 def root_smooth_counter(y):
@@ -35,27 +56,41 @@ def root_smooth_counter(y):
     return counter
 
 
-upperlimit = 10000000000
-
-#print (int(upperlimit*(1-math.log(2))))
-
-
-def Hildebrand(x):
-    #return int(((1-math.log(2)) * x) + (x / math.log(x)))
-    return int((1-math.log(2)) * x)
+def rs_range_counter(a, b):
+    counter = 0
+    for i in range(a, b+1):
+        if is_root_smooth(i):
+            counter += 1
+    return counter
 
 
-#for i in range(1000000, 2000000, 10000):
-#    a = root_smooth_counter(i)
-#    b = Hildebrand(i)
-#    print(a, b, a-b, i, int(100*(a-b)/i))
+def fast_rs_range_counter(a, b):
+    counter = 0
+    for i in range(a, b+1):
+        if fast_is_root_smooth(i):
+            counter += 1
+    return counter
 
-# def Sqrtspeedtest(x):
-#     start_time = time.time()
-#     for i in range(0, x):
-#         y = math.sqrt(x)
-#     return("--- %s seconds ---" % (time.time() - start_time))
+upperbound = 100000000
+
+start = time.time()
+primeset = primes(upperbound)
+end = time.time()
+print(end - start, " seconds to populate the primes table up to ", upperbound)
+
+# start = time.time()
+# print(fast_rs_range_counter(1, upperbound))
+# end = time.time()
+# print(end - start, " seconds the new way.")
+#
+# start = time.time()
+# print(rs_range_counter(1, upperbound))
+# end = time.time()
+# print(end - start, " seconds the old way.")
 
 
-print(Hildebrand(10000000000))
+# for i in range(1, 100):
+#     if not (is_root_smooth(i) == fast_is_root_smooth(i)):
+#         print(i, is_root_smooth(i), fast_is_root_smooth(i))
+
 
