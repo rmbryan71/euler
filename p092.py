@@ -1,5 +1,5 @@
 import math, time
-
+cache = {1: 1, 89: 89}
 
 def next(x):
     y = str(x)
@@ -26,8 +26,19 @@ def dest_is_89(x):
     else:
         return dest_is_89(next(x))
 
+#start = time.time()
+# counter = 0
+# for i in range(1, 10000000):
+# counter += dest_is_89(i)
+#print(counter, time.time() - start)
+
+
+def fill(n):
+    if n not in cache:
+        cache[n] = fill(sum([int(char)**2 for char in str(n)]))
+    return cache[n]
+
 start = time.time()
-counter = 0
-for i in range(1, 10000000):
-    counter += dest_is_89(i)
-print(counter, time.time() - start)
+print(sum([fill(i) == 89 for i in range(1, 10**7)]))
+print(time.time() - start, " seconds.")
+
