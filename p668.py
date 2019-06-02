@@ -52,9 +52,9 @@ def rs_range_counter_beta(a, b):
 
 
 counter = 0
-max = 10000000000
+max = 200000000
 globalstart = time.time()
-for a in range(1, max, 100000):
+for a in range(100000000, max, 100000):
     start = time.time()
     x = rs_range_counter_beta(a, a + 99999)
     end = time.time()
