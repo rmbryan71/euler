@@ -36,8 +36,8 @@ for i in range(0, gridsize + 1):
     for j in range(0, gridsize + 1):
         for l in range(0, gridsize + 1):
             for m in range(0, gridsize + 1):
-                #print(i, j, l, m, is_right(i, j, l, m))
-                count += is_right(i, j, l, m)
+                if ((i >= l) or (j >= m)):
+                    count += is_right(i, j, l, m)
     print(i, " of ", gridsize, " elapsed time is ", time.time() - start)
 end = time.time()
 print(int(count / 2), end - start, " seconds.")
