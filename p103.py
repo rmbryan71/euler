@@ -77,7 +77,7 @@ def is_special7(inputset): #test for N = 7
 
 
 range_bottom = 19
-range_top = 49
+range_top = 46
 # range_bottom = 10
 # range_top = 28
 
@@ -100,6 +100,7 @@ for test in itertools.combinations(range, 7):
         if sum(test) < minsum:
             winner = test
             minsum = sum(test)
+            break
 duration = int(time.time() - start) + 1
 
 print(duration, " seconds executions time for ", tests, " tests is ", int(tests / duration), " tests per second in a range of ", range_size)
