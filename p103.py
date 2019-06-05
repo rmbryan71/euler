@@ -36,9 +36,6 @@ def is_special6(inputset): #test for N = 6
 
 
 def is_special7(inputset): #test for N = 7
-    if not len(inputset) == 7:
-        return False
-
     for x in itertools.permutations(inputset):
         b = [x[0], x[1]]
         c = [x[2]]
@@ -71,7 +68,6 @@ def is_special7(inputset): #test for N = 7
         else:
             return True
 
-
 # range = [x for x in range(11, 29)]
 # start = time.time()
 # for test in itertools.combinations(range, 6):
@@ -79,14 +75,21 @@ def is_special7(inputset): #test for N = 7
 #         print(test, sum(test))
 # print(int(time.time() - start), " seconds executions time.")
 
-range = [x for x in range(28, 46)]
+range_bottom = 30
+range_top = 44
+range_size = range_top - range_bottom
+
+range = [x for x in range(range_bottom, range_top)]
 start = time.time()
 solutions = 0
+tests = 0g
 for test in itertools.combinations(range, 7):
+    tests += 1
     if is_special7(test):
         print(test, sum(test))
         solutions += 1
         if solutions == 10:
             break
+duration = int(time.time() - start)
 
-print(int(time.time() - start), " seconds executions time.")
+print(duration, " seconds executions time for ", tests, " tests is ", int(tests / duration), " tests per second in a range of ", range_size)
