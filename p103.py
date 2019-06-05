@@ -1,4 +1,4 @@
-import itertools, time
+import itertools, time, math
 
 
 def set_sum(inputset):
@@ -75,21 +75,34 @@ def is_special7(inputset): #test for N = 7
 #         print(test, sum(test))
 # print(int(time.time() - start), " seconds executions time.")
 
-range_bottom = 30
-range_top = 44
-range_size = range_top - range_bottom
 
+range_bottom = 19
+range_top = 49
+# range_bottom = 10
+# range_top = 28
+
+range_size = range_top - range_bottom
+testload = math.factorial(range_size) // math.factorial(7) // math.factorial(range_size - 7)
+print(testload, " tests to do.")
 range = [x for x in range(range_bottom, range_top)]
 start = time.time()
-solutions = 0
-tests = 0g
+solutions = []
+tests = 0
+minsum = 500
+winner = []
+
 for test in itertools.combinations(range, 7):
     tests += 1
+    if tests % 10000 == 0:
+        print((100 * tests / testload), " percent done in ", int(time.time() - start), " seconds, so far solution count is: ", len(solutions))
     if is_special7(test):
-        print(test, sum(test))
-        solutions += 1
-        if solutions == 10:
-            break
-duration = int(time.time() - start)
+        solutions.append(test)
+        if sum(test) < minsum:
+            winner = test
+            minsum = sum(test)
+duration = int(time.time() - start) + 1
 
 print(duration, " seconds executions time for ", tests, " tests is ", int(tests / duration), " tests per second in a range of ", range_size)
+print(solutions)
+print("Winner is...", winner)
+
