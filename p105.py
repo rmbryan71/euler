@@ -1,4 +1,4 @@
-import itertools, time
+import itertools, time, multiprocessing
 
 
 def is_special(inputset):
@@ -83,9 +83,15 @@ def is_special(inputset):
                                                                             return True
 
 
+def if_sum(a):
+    if is_special(a):
+        return sum(a)
+    else:
+        return 0
+
 answer = 0
-#with open('p105_sets.txt') as f:
-with open('p105_timingset') as f:
+with open('p105_sets.txt') as f:
+#with open('p105_timingset') as f:
     data = [[int(num) for num in line.split(',')] for line in f]
 f.close()
 
@@ -99,6 +105,8 @@ f.close()
 #     else:
 #         print(i, " is not special", len(j), " duration = ", time.time() - inner_start)
 
+pool = multiprocessing.Pool(4)
 start = time.time()
-j = [sum(i) for i in data if is_special(i)]
-print(sum(j), time.time() - start)
+#j = [sum(i) for i in data if is_special(i)]
+print(sum((pool.map(if_sum, data))))
+
