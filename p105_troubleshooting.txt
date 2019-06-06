@@ -1,3 +1,5 @@
+# First Response:
+
 0  is not special
 1  is special
 2  is special
@@ -99,3 +101,25 @@
 98  is special
 99  is not special
 187292
+
+Timing info from first version:
+0  is not special 8  duration =  0.06764507293701172
+1  is special. size =  9  duration =  0.8096723556518555
+1286 [157, 150, 164, 119, 79, 159, 161, 139, 158]
+2  is special. size =  11  duration =  85.89087152481079
+7501 [673, 465, 569, 603, 629, 592, 584, 300, 601, 599, 600]
+3  is special. size =  8  duration =  0.08313345909118652
+8117 [90, 85, 83, 84, 65, 87, 76, 46]
+4  is special. size =  9  duration =  0.8061120510101318
+9526 [165, 168, 169, 190, 162, 85, 176, 167, 127]
+5  is special. size =  9  duration =  0.7853519916534424
+11831 [224, 275, 278, 249, 277, 279, 289, 295, 139]
+6  is special. size =  10  duration =  8.310349225997925
+15144 [354, 370, 362, 384, 359, 324, 360, 180, 350, 270]
+7  is special. size =  11  duration =  98.85754418373108
+21268 [599, 595, 557, 298, 448, 596, 577, 667, 597, 588, 602]
+8  is special. size =  9  duration =  0.7910559177398682
+22740 [175, 199, 137, 88, 187, 173, 168, 171, 174]
+9  is not special 9  duration =  0.6332058906555176
+10  is not special 9  duration =  0.6105475425720215
+11  is not special 9  duration =  0.24030828475952148
