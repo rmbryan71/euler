@@ -1,13 +1,23 @@
 import itertools, time, multiprocessing
-
+counter = 0
 
 def is_special(inputset):
-    n = len(inputset)
 
-    for x in itertools.permutations(inputset):
-        b = [x[0], x[1]]
-        c = [x[2]]
-        if sum(b) <= sum(c):
+    n = len(inputset)
+    sortedset = sorted(inputset)
+    print(sortedset)
+
+    if(sortedset[0] + sortedset[1]) <= sortedset[-1]:
+        return False
+    if (sortedset[0] + sortedset[1] + sortedset[2]) <= (sortedset[-1] + sortedset[-2]):
+        return False
+    if (sortedset[0] + sortedset[1] + sortedset[2] + sortedset[3]) <= (sortedset[-1] + sortedset[-2] + sortedset[-3]):
+        return False
+    if n >= 9:
+        if (sortedset[0] + sortedset[1] + sortedset[2] + sortedset[3] + sortedset[4]) <= (sortedset[-1] + sortedset[-2] + sortedset[-3] + sortedset[-4]):
+            return False
+    if n >= 11:
+        if (sortedset[0] + sortedset[1] + sortedset[2] + sortedset[3] + sortedset[4] + sortedset[5]) <= (sortedset[-1] + sortedset[-2] + sortedset[-3] + sortedset[-4] + sortedset[-5]):
             return False
 
     for x in itertools.permutations(inputset):
@@ -18,69 +28,30 @@ def is_special(inputset):
 
     for x in itertools.permutations(inputset):
         b = [x[0], x[1], x[2]]
-        c = [x[3], x[4]]
-        if sum(b) <= sum(c):
-            return False
-
-    for x in itertools.permutations(inputset):
-        b = [x[0], x[1], x[2]]
         c = [x[3], x[4], x[5]]
         if sum(b) == sum(c):
             return False
 
-    for x in itertools.permutations(inputset):
-        b = [x[0], x[1], x[2], x[3]]
-        c = [x[4], x[5], x[6]]
-        if sum(b) <= sum(c):
-            return False
-        else:
-            if n == 7:
-                return True
-            else:
-                for x in itertools.permutations(inputset):
-                    b = [x[0], x[1], x[2], x[3]]
-                    c = [x[4], x[5], x[6], x[7]]
-                    if sum(b) == sum(c):
-                        return False
-                    else:
-                        if n == 8:
-                            return True
-                        else:
-                            for x in itertools.permutations(inputset):
-                                b = [x[0], x[1], x[2], x[3], x[4]]
-                                c = [x[5], x[6], x[7], x[8]]
-                                if sum(b) <= sum(c):
-                                    return False
-                                else:
-                                    if n == 9:
-                                        return True
-                                    else:
-                                        for x in itertools.permutations(inputset):
-                                            b = [x[0], x[1], x[2], x[3], x[4]]
-                                            c = [x[5], x[6], x[7], x[8], x[9]]
-                                            if sum(b) == sum(c):
-                                                return False
-                                            else:
-                                                if n == 10:
-                                                    return True
-                                                else:
-                                                    for x in itertools.permutations(inputset):
-                                                        b = [x[0], x[1], x[2], x[3], x[4], x[5]]
-                                                        c = [x[6], x[7], x[8], x[9], x[10]]
-                                                        if sum(b) <= sum(c):
-                                                            return False
-                                                        else:
-                                                            if n == 11:
-                                                                return True
-                                                            else:
-                                                                for x in itertools.permutations(inputset):
-                                                                    b = [x[0], x[1], x[2], x[3], x[4], x[5]]
-                                                                    c = [x[6], x[7], x[8], x[9], x[10], x[11]]
-                                                                    if sum(b) == sum(c):
-                                                                        return False
-                                                                    else:
-                                                                        if n == 12:
-                                                                            return True
+    if n >= 8:
+        for x in itertools.permutations(inputset):
+            b = [x[0], x[1], x[2], x[3]]
+            c = [x[4], x[5], x[6], x[7]]
+            if sum(b) == sum(c):
+                return False
+    if n >= 10:
+        for x in itertools.permutations(inputset):
+            b = [x[0], x[1], x[2], x[3], x[4]]
+            c = [x[5], x[6], x[7], x[8], x[9]]
+            if sum(b) == sum(c):
+                return False
+
+    if n == 12:
+        for x in itertools.permutations(inputset):
+            b = [x[0], x[1], x[2], x[3], x[4], x[5]]
+            c = [x[6], x[7], x[8], x[9], x[10], x[11]]
+            if sum(b) == sum(c):
+                return False
+    return True
 
 
 def if_sum(a):
