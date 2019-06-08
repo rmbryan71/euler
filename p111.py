@@ -26,7 +26,7 @@ def m10(d): # max repeated digits(d) for a 10 digit number
 p = multiprocessing.Pool(4)
 
 start = time.time()
-print(list(map(m10, range(0, 10))))
+print(list(p.map(m10, range(0, 10))))
 print(time.time() - start)
 
 
