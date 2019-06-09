@@ -49,22 +49,49 @@ def m10(d):  # naive array of digits and max repetitions of digits in a d-digit 
 
 
 def f(x, y):  # returns all prime 10-digit numbers with x or more repetitions of digit y
+    result_list = []
     fillercount = 10 - x
     digit_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    fillers = itertools.combinations(digit_list, fillercount)
-    repeat_list = [7, 7, 7, 7, 7]
+    fillers = itertools.product(digit_list, fillercount)
+    repeat_list = list(itertools.repeat(y, x))
     for fill in fillers:
-        print(list(fill))
-    #candidates = list(itertools.permutations(myset))
-    #print(list(dict.fromkeys(candidates)))
-    #print(len(list(dict.fromkeys(candidates))))
+        test_list = list(repeat_list + list(fill))
+        test_set = list(set(itertools.permutations(test_list)))
+        for test in test_set:
+            mystr = ""
+            for digit in test:
+                mystr += str(digit)
+            if sympy.isprime(int(mystr)) and len(str(int(mystr))) == 10:
+                # print(int(mystr), " is prime and has ", x, " or more repetitions of the digit ", y)
+                result_list.append(int(mystr))
+    return result_list
+
+
+def g(x):  # returns max number of repeated digit for a 10 digit prime for digit x
+    for i in range(10, 1, -1):
+        if len(f(i, x)) > 0:
+            return i
 
 
 def main():
     start = time.time()
 
+    #f(9, 6)
+    # print(g(0))
+
     #  print([m(6, x) for x in range(0, 9)])
-    print(f(8, 7))
+    answer = 0
+    # answer += (sum(f(9, 9)))
+    #
+    for i in range(0, 10):
+        M = g(i)
+        solutions = f(M, i)
+        N = len(solutions)
+        S = sum(solutions)
+        print(i, M, N, S, solutions)
+        answer += S
+
+    print(answer)
 
     print(int(time.time() - start), " seconds to run.")
 
