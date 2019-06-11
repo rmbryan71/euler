@@ -6,18 +6,24 @@ import functools
 import operator as op
 
 
-def f(x):
-    z = [i for i in itertools.count(x)]
-    print z
+def f(length, m):  # length of row = length, block size is m
+    result = [1] + [0] * length
+    #print(result)
+    for i in range(1, len(result)):
+        result[i] += result[i-1]
+        if i >= m:
+            result[i] += result[i - m]
+    return result[-1] - 1
 
 
 def main():
 
-    for i in range(1,10):
-        start = time.time()
-        f(i)
-
-        print(int(time.time() - start), " seconds to run.")
+    start = time.time()
+    result = 0
+    for i in range(2, 5):
+        result += f(50, i)
+    print(result)
+        #print(i, int(time.time() - start), " seconds to run.")
 
 
 main()
