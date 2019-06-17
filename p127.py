@@ -58,18 +58,19 @@ def is_hit(a, b, c, limit):
 
 
 def f127_c():  # experimental
-    for limit in range(120000, 120001, 1500):
+    for limit in range(1000, 120001, 1000):
         start = time.time()
         count = 0
         result = 0
         resultset = []
         myset = []  # every number less than limit that is x^y
         for x in range(1, math.floor(math.sqrt(limit) + 1)):
-            for y in range(0, math.floor(math.sqrt(limit) + 1)):
+            for y in range(0, 17):
                 z = x**y
                 if z < limit and z not in myset:
                     myset.append(z)
-        #  set is built, now use to make candidate solutions
+        #print("root set is built, now use to make candidate solutions")
+
         for s in itertools.combinations(myset, 2):
             a = min(s)
             b = max(s)
