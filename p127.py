@@ -58,27 +58,24 @@ def is_hit(a, b, c, limit):
 
 
 def f127_c():  # experimental
-    for limit in range(1000, 1001, 1000):
+    for limit in range(10000, 10001, 1000):
         start = time.time()
         count = 0
         result = 0
         resultset = []
-        myset = [1, 2]  # every number less than limit that is x^y
+        littleset = [1]  # every number less than limit that is x^y
         for x in range(1, limit):
             for y in range(2, 17):
                 z = x**y
-                if z < limit and z not in myset:
-                    myset.append(z)
-        print("root set list length:", len(myset))
-        # for w in sorted(myset):
-        #     print(w)
-        # print(len(myset))
-        # break
+                if z < limit and z not in littleset:
+                    littleset.append(z)
+        myints = list(range(1, 500))
+        myset = littleset + myints
+        n = len(myset)
+        calculations = math.factorial(n) // (2*(math.factorial(n - 2)))
+        print(len(myset), "estimated to take:", calculations//5316, "seconds")
 
-        t = list(itertools.combinations(myset, 2))
-        print("combinations to check:", len(t))
-
-        for s in t:
+        for s in itertools.combinations(myset, 2):
             a = min(s)
             b = max(s)
             c = a + b
@@ -101,7 +98,34 @@ def f127_c():  # experimental
         resultset = dedup
         for i in sorted(resultset):
             result += i[2]
-            #print(i)
-        print(len(resultset), result, limit, int(time.time() - start))
+            # print(i)
+        # print(len(resultset), result, limit, int(time.time() - start))
+        for item in resultset:
+            itemcount = 0
+            for a in item:
+                if a in littleset:
+                    itemcount += 1
+            if itemcount < 2:
+                print(item, itemcount)
 
-f127_c()
+
+def gen_root_set(limit):  # returns a list of all numbers less than x that are a^b
+    root_set = []
+    max_exp = math.floor(math.log2(limit)) + 1
+    for x in range(1, limit):
+        for y in range(2, max_exp):
+            z = x ** y
+            if z < limit and z not in root_set:
+                root_set.append(z)
+    return sorted(root_set)
+
+
+def f127_d(limit):
+    root_set = gen_root_set(limit)
+    for root in root_set:
+        for i in range(1, limit - root):
+            if is_hit(root, i, (limit - root - i), limit):
+                print(root, i, (limit - root - i))
+
+
+f127_d(1000)
