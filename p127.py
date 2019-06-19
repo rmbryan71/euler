@@ -120,12 +120,32 @@ def gen_root_set(limit):  # returns a list of all numbers less than x that are a
     return sorted(root_set)
 
 
+def setbuilder(x, limit):  # return all combinations of a + b = c < limit
+    sets = []
+    for i in range(1, ((x // 2) + 1)):  # cases where root is c
+        sets.append([i, x - i, x])
+    for i in range(1, limit - x):  # case where root is b
+        sets.append([i, x, i + x])
+    for i in range(x + 1, limit - x):  # case where root is a
+        sets.append([x, i, x + i])
+    return sorted(sets)
+
+
 def f127_d(limit):
+    total, count = 0, 0
+    hits = []
     root_set = gen_root_set(limit)
+    print(len(root_set), "roots")
     for root in root_set:
-        for i in range(1, limit - root):
-            if is_hit(root, i, (limit - root - i), limit):
-                print(root, i, (limit - root - i))
+        print(root, root*100 // limit)
+        for set in setbuilder(root, limit):
+            if is_hit(set[0], set[1], set[2], limit) and set not in hits:
+                total += set[2]
+                count += 1
+                hits.append(set)
+    for hit in sorted(hits):
+        print(hit[0], hit[1], hit[2])
+    print(count, total)
 
 
-f127_d(1000)
+f127_d(10000)
