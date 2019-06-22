@@ -3,6 +3,7 @@ import itertools
 import time
 import multiprocessing
 
+
 def make_r_list(x):
     repunits = [1]
     repstring = '1'
