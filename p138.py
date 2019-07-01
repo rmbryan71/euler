@@ -39,7 +39,7 @@ def f(x):
 
 start = time.time()
 # mymax = (10**8)
-mymax = 10**7
+mymax = 10**8
 mytriplets = pythagoreanTriplets(int(mymax * .75))
 # mytriplets = pythagoreanTriplets(int(mymax))
 winners = []
