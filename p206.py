@@ -85,5 +85,5 @@ for a in range(0, 10):
                                 for i in range(0, 10):
                                     x = str('1' + str(a) + '2' + str(b) + '3' + str(c) + '4' + str(d) + '5' + str(e) + '6' + str(f) + '7' + str(g) + '8' + str(h) + '9' + str(i) + '0')
                                     if is_square(int(x)):
-                                        print(x, math.sqrt(x))
+                                        print(int(x), math.sqrt(int(x)))
 
