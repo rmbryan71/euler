@@ -1,0 +1,125 @@
+# First Response:
+
+0  is not special
+1  is special
+2  is special
+3  is special
+4  is special
+5  is special
+6  is special
+7  is special
+8  is special
+9  is not special
+10  is not special
+11  is not special
+12  is not special
+13  is not special
+14  is not special
+15  is special
+16  is special
+17  is not special
+18  is special
+19  is not special
+20  is not special
+21  is special
+22  is not special
+23  is not special
+24  is special
+25  is not special
+26  is special
+27  is special
+28  is not special
+29  is special
+30  is not special
+31  is special
+32  is not special
+33  is special
+34  is not special
+35  is not special
+36  is special
+37  is special
+38  is not special
+39  is not special
+40  is special
+41  is special
+42  is special
+43  is special
+44  is special
+45  is special
+46  is not special
+47  is special
+48  is not special
+49  is not special
+50  is not special
+51  is special
+52  is special
+53  is not special
+54  is special
+55  is special
+56  is special
+57  is special
+58  is special
+59  is not special
+60  is not special
+61  is not special
+62  is special
+63  is not special
+64  is special
+65  is not special
+66  is special
+67  is special
+68  is special
+69  is special
+70  is not special
+71  is special
+72  is not special
+73  is special
+74  is not special
+75  is special
+76  is not special
+77  is not special
+78  is special
+79  is not special
+80  is special
+81  is not special
+82  is special
+83  is special
+84  is not special
+85  is not special
+86  is not special
+87  is special
+88  is special
+89  is not special
+90  is not special
+91  is special
+92  is special
+93  is special
+94  is special
+95  is special
+96  is not special
+97  is not special
+98  is special
+99  is not special
+187292
+
+Timing info from first version:
+0  is not special 8  duration =  0.06764507293701172
+1  is special. size =  9  duration =  0.8096723556518555
+1286 [157, 150, 164, 119, 79, 159, 161, 139, 158]
+2  is special. size =  11  duration =  85.89087152481079
+7501 [673, 465, 569, 603, 629, 592, 584, 300, 601, 599, 600]
+3  is special. size =  8  duration =  0.08313345909118652
+8117 [90, 85, 83, 84, 65, 87, 76, 46]
+4  is special. size =  9  duration =  0.8061120510101318
+9526 [165, 168, 169, 190, 162, 85, 176, 167, 127]
+5  is special. size =  9  duration =  0.7853519916534424
+11831 [224, 275, 278, 249, 277, 279, 289, 295, 139]
+6  is special. size =  10  duration =  8.310349225997925
+15144 [354, 370, 362, 384, 359, 324, 360, 180, 350, 270]
+7  is special. size =  11  duration =  98.85754418373108
+21268 [599, 595, 557, 298, 448, 596, 577, 667, 597, 588, 602]
+8  is special. size =  9  duration =  0.7910559177398682
+22740 [175, 199, 137, 88, 187, 173, 168, 171, 174]
+9  is not special 9  duration =  0.6332058906555176
+10  is not special 9  duration =  0.6105475425720215
+11  is not special 9  duration =  0.24030828475952148
