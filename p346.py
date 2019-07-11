@@ -1,3 +1,5 @@
+import math
+
 def tostr(n, base):
     convertstring = "0123456789ABCDEF"
     if n < base:
@@ -28,12 +30,24 @@ def g(x):  # return True if x is a strong repunit
             return True
     return False
 
-
-sum = 0
-for i in range(1, 10**12):
-    if g(i):
-        sum += i
-        print(i, sum, int(i*100)//10**12)
-print(sum)
+#
+# sum = 0
+# for i in range(1, 10**10):
+#     if g(i):
+#         sum += i
+#         print(i, sum, int(i*100)//10**12)
+# print(sum)
 
 # Maybe it would be faster to make all the base 2 repunits, then base 3 repunits,
+
+#oeis A053696
+
+
+def gen(limit):
+    b = 2
+    while (b^3 - 1)/(b-1) <= limit:
+        k = 3
+
+        print(b)
+
+gen(10000)
