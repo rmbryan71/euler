@@ -1,6 +1,7 @@
 # oeis A053696
 import math
 import fractions
+import time
 
 # def tostr(n, base):
 #     convertstring = "0123456789ABCDEF"
@@ -61,13 +62,14 @@ def gen(x):  # generate all A053696 numbers less than x using (b^n-1)/(b-1), ret
             # y = ((b ** n - 1) / (b - 1))
             if int(y) == y:
                 y = int(y)
-                if y < x and y not in result:
-                    print(n, b, y)
+                if y < x:
+                    # print(n, b, y)
                     result.append(y)
     return sorted(result)
 
 
-print(sum(gen(10**12)))
+start = time.time()
+print(sum(gen(10**12    )), int(time.time() - start))
 
 
 
